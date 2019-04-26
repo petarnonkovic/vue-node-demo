@@ -1,0 +1,76 @@
+{
+    "name": "vue-node-demo",
+    "description": "Node Vue Task Manager Demo App",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./server/server.js",
+    "scripts": {
+        "start": "node ./server/server.js",
+        "start:dev": "nodemon",
+        "serve": "set DEBUG=app_debug:* & babel-node ./src/server.js",
+        "serve:prod": "set DEBUG=app_debug:* & node ./server/server.js",
+        "build:prod": "set NODE_ENV=production & babel ./src -d server --ignore \"src/__tests__/**/*.test.js\"",
+        "build:dev": "set DEBUG=app_debug:* & babel ./src -d server --source-maps --ignore \"src/__tests__/**/*.test.js\"",
+        "lint": "eslint . ./src/server.js",
+        "lint:fix": "eslint . ./src/server.js --fix",
+        "test": "jest --config=jest.config.js --runInBand",
+        "test:unit": "jest --watch --config=jest.unit.config.js -i \"task.model.test\"",
+        "test:e2e": "jest --config=jest.e2e.config.js"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 9",
+        "not dead"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/petarnonkovic/vue-node-demo.git"
+    },
+    "keywords": [
+        "Node.js",
+        "Javascript",
+        "Express",
+        "Mongoose"
+    ],
+    "dependencies": {
+        "@babel/polyfill": "^7.2.5",
+        "@babel/runtime": "^7.3.1",
+        "bluebird": "^3.5.4",
+        "compression": "^1.7.3",
+        "connect-history-api-fallback": "^1.6.0",
+        "cors": "^2.8.5",
+        "debug": "~4.1.1",
+        "dotenv": "^6.2.0",
+        "express": "~4.16.4",
+        "express-validator": "^5.3.1",
+        "helmet": "^3.15.1",
+        "lodash": "^4.17.11",
+        "method-override": "^3.0.0",
+        "moment": "^2.24.0",
+        "mongoose": "^5.5.0",
+        "morgan": "^1.9.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.3.4",
+        "@babel/node": "^7.2.2",
+        "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+        "@babel/plugin-transform-runtime": "^7.3.4",
+        "@babel/preset-env": "^7.3.4",
+        "babel-eslint": "^10.0.1",
+        "babel-minify": "^0.5.0",
+        "eslint": "^5.16.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jest": "^22.4.1",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "jest": "^24.7.1",
+        "jest-mongoose-mock": "^1.2.0",
+        "nodemon": "^1.18.10",
+        "standard": "^12.0.1",
+        "supertest": "^4.0.2"
+    }
+}
