@@ -1,0 +1,6 @@
+{
+    "exec": "yarn run serve",
+    "watch": ["./src"],
+    "ignore": ["./src/__tests__", "README"],
+    "ext": ".js"
+}

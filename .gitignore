@@ -57,13 +57,9 @@ public/.sass-cache/
 
 # dotenv environment variables file
 .env
-.env.example
 client/
-src/
 
 # testing config files 'jest.config.js'
-jest.config.js
 jest.e2e.config.js
 jest.unit.config.js
-nodemon.json
 
