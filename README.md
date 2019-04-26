@@ -1,5 +1,7 @@
 # Express Vue demo app
 
+Task Manager fullstack demo app. Developed for better understanding VueJS and Jest testing
+
 ## BackEnd Express Server
 
 - to run server
